@@ -91,6 +91,9 @@
                 <input name="edit-user" type="submit" value="Modificar">
             </div>
         </form>
+    <?php
+        echo "<br/><a href='admin.php'>Volver</a>";
+    ?>
     </main>
 </body>
 </html>

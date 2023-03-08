@@ -4,5 +4,4 @@ session_start();
 require_once("./user-control.php");
 userControl();
 
-
 ?>

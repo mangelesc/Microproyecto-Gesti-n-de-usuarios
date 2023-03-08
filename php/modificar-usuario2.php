@@ -32,14 +32,21 @@ if(isset($_POST['edit-user'])){
         $newRol = $_POST['tipo_usuario-edit'];
     }
     echo($_SESSION['currentUser']['id_usuario'] . $newUsername.$newEmail. $newPassword .$newRol);
-    echo("2123");
-    modificarUsuario($_SESSION['currentUser']['id_usuario'], $newUsername, $newEmail, $newPassword , $newRol);
-    echo "<script>alert('Usuario modificado correctamente')</script>";
-    unset($_SESSION['currentUser']);
-    header("Location: admin.php");
+    try {
+        modificarUsuario($_SESSION['currentUser']['id_usuario'], $newUsername, $newEmail, $newPassword , $newRol);
+        if ($_SESSION['currentUser']['id_usuario'] == $_SESSION['id_usuario']){
+            session_destroy();
+            echo "<script type='text/javascript'>alert('Su usuario modificado correctamente, por favor, inicie sesión de nuevo');</script>";
+        } else {
+            echo "<script type='text/javascript'>alert('Usuario modificado correctamente');</script>";
+            
+        }
+    } catch (Exception $e){
+        echo "<script type='text/javascript'>alert('Ha habido un error, el usuario no ha podido ser modficado');</script>";
     }
-
-echo "<br/><a href='admin.php'>Volver</a>";
+    unset($_SESSION['currentUser']);
+    header("Refresh:0; url=./admin.php");
+    }
 
 cerrarConexion();
 
