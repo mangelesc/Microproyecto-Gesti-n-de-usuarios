@@ -19,8 +19,8 @@
                     <li class="menu">
                         <a id="home" href="">Home</a>
                     </li>
-                    <li class="menu"><a id="AdminPanel" href="">Admin Panel</a></li>
-                    <li class="menu"><a id="myProfile" href="">My Profile</a></li>
+                    <li class="menu"><a id="AdminPanel" href="./admin-panel.php">Admin Panel</a></li>
+                    <li class="menu"><a id="myProfile" href="./my-profile.php">My Profile</a></li>
                     <li class="menu">
                         <a id="log-out" href="./cerrar_sesion.php">Log Out</a>
                     </li>
