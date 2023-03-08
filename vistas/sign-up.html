@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/log-in.css" />
+        <link rel="stylesheet" href="./styles/navbar.css" />
+        <title>Log in</title>
+    </head>
+    <body>
+        <nav id="navBar">
+            <div id="navBar-left">
+                <img src="./imgs/logo.png" alt="logo" id="navbar-logo">
+            </div>
+            <div id="navBar-right">
+                <ul id="navBarList">
+                    <li class="menu"> 
+                        <a id="home" href="">Home</a>
+                    </li>
+                    <li class="menu"><a id="log-in" href="">Log in</a></li>
+                    <li class="menu"><a id="sign-up"href="">Sign up</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <main id="main">
+            <div id="form-full-section">
+                <div id="leftSection">
+                    <div id="logo" class=rightSection-div">
+                        <h1>Microproyecto</h1>
+                    </div>
+                    <div id="info" class=rightSection-div">
+                        <p>Log into your account</p>
+                    </div>
+                    <div id="form" class=rightSection-div">
+                        <form action="" method="post">
+                            <div class="formSection">
+                                <label for="">Username</label>
+                                <input
+                                    type="text"
+                                    placeholder="myUsername"
+                                    required
+                                />
+                            </div>
+                            <div class="formSection">
+                                <label for="">Email address</label>
+                                <input
+                                    type="text"
+                                    placeholder="email@myemail.com"
+                                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                    required
+                                />
+                            </div>
+                            <div class="formSection">
+                                <label for="">Confirm your email address</label>
+                                <input
+                                    type="text"
+                                    placeholder="email@myemail.com"
+                                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                    required
+                                />
+                            </div>
+                            <div class="formSection">
+                                <label for="">Password</label>
+                                <input type="password" placeholder="Password" required />
+                            </div>
+                            <div class="formSection">
+                                <label for="">Confirm your password</label>
+                                <input type="password" placeholder="Password" required />
+                            </div>
+                            <div class="formSection">
+                                <input id="signup-submit" type="submit" value="Sign up">
+                            </div>
+                        </form>
+                        <div id="change" class="formSection">
+                            <p>
+                                Are you already a member?
+                                <a href="">Log in</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightSection">
+                    <img src="./imgs/img-form.jpg" alt="">
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <h2>Grupo 05</h2>
+        </footer>
+    </body>
+</html>
