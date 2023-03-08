@@ -8,38 +8,23 @@ adminControl();
 
 require_once ("../database/database.php");
 
-echo "<h1> Area de creación de usuarios</h1>";
+require_once("../vistas/add-user.php");
 
-echo "
-
-    <form action='crear_usuario.php' method='post'>
-    Usuario: <input type='text' name='user'><br>
-    Email: <input type='text' name='email'><br>
-    Contraseña: <input type='password' name='password'><br>
-    Tipo: <select name='tipo_usuario'>
-        <option value='0'>ADMIN</option>
-        <option value='1'>USUARIO</option>
-    </select>
-    <input type='submit' name='crear' Value='Crear Usuaruio'>
-    ";
-
-if(isset($_POST['crear'])){
-    if(empty($_POST['user']) || empty($_POST['password']) || empty($_POST['email'])){
-        echo "Debes rellenar todos los campos";
+if(isset($_POST['add-user'])){
+    if(empty($_POST['user-add']) || empty($_POST['email-add']) ||empty($_POST['password-add']) || empty($_POST['email-add'])){
+        echo "<script type='text/javascript'>alert('Debes rellenar todos los campos para crear un nuevo usuario');</script>";
     }
     else{
-        $password = ($_POST['password']);
-        crearUsuario($_POST['user'], $_POST['email'], $password, $_POST['tipo_usuario']);
-        header("Location: admin.php");
+        try{
+            crearUsuario($_POST['user-add'], $_POST['email-add'], $_POST['password-add'], $_POST['tipo_usuario-add']);
+            echo "<script type='text/javascript'>alert('Usuarioa añadido correctamente');</script>";
+        } catch (Exception $e){
+        echo "<script type='text/javascript'>alert('Ha habido un error, no se ha podido añadir el nuevo usuario. Inténtalo de nuevo');</script>";
+        }
+        header("Refresh:0; url=./admin.php");
     }
 }
 
-echo "<br/><a href='admin.php'>Volver</a>";
 cerrarConexion();
-
-//cerramos la sesion del usuario y le mandamos a cerrar_sesion.php el cual le mandará al index.php
-echo " <br> <a href='cerrar_sesion.php'>Cerrar sesión</a>";
-
-
 
 ?>
