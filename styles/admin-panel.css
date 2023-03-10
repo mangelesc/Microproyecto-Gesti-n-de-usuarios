@@ -43,12 +43,14 @@ a#add-user {
 .admin-table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid;
+    border: 2px solid #545e56;
     margin: 50px 0px;
 }
 
 .admin-table th {
     padding: 10px;
+    background-color: #545e56;
+    color: white;
 }
 
 .admin-table tr {

@@ -22,7 +22,7 @@
                     <li class="menu"><a id="AdminPanel" href="./admin.php">Admin Panel</a></li>
                     <li class="menu"><a id="myProfile" href="./my-profile.php">Mi Perfil</a></li>
                     <li class="menu">
-                        <a id="log-out" href="./cerrar_sesion.php">Salir</a>
+                        <a id="log-out" href="./cerrar_sesion.php">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>
