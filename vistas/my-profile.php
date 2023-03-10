@@ -52,12 +52,7 @@
                             <p><?php echo $_SESSION['user'];?></p>
                         </div>
                         <div class="userProf-div-btn">
-                            <?php echo "
-                            <a class='btn' onClick=\"javascript: return confirm('¿Seguro que quieres borrar este usuario?');\"
-                                href='./borrar_usuario.php?id_usuario=".$_SESSION['id_usuario']."'>
-                                Cambiar
-                            </a>
-                            "?>
+                            <!-- <a class='btn' href=''> Cambiar </a> -->
                         </div>
                     </div>
                     <div class="userProf-div">
@@ -69,12 +64,7 @@
                             <p><?php echo $_SESSION['email'];?></p>
                         </div>
                         <div class="userProf-div-btn">
-                            <?php echo "
-                            <a class='btn' onClick=\"javascript: return confirm('¿Seguro que quieres borrar este usuario?');\"
-                                href='./borrar_usuario.php?id_usuario=".$_SESSION['id_usuario']."'>
-                                Cambiar
-                            </a>
-                            "?>
+                            <!-- <a class='btn' href=''> Cambiar </a> -->
                         </div>
                     </div>
                     <div class="userProf-div">
@@ -86,12 +76,7 @@
                             <p>*******</p>
                         </div>
                         <div class="userProf-div-btn">
-                            <?php echo "
-                            <a class='btn' onClick=\"javascript: return confirm('¿Seguro que quieres borrar este usuario?');\"
-                                href='./borrar_usuario.php?id_usuario=".$_SESSION['id_usuario']."'>
-                                Cambiar
-                            </a>
-                            "?>
+                            <!-- <a class='btn' href=''> Cambiar </a> -->
                         </div>
                     </div>
                     <div class="userProf-div">

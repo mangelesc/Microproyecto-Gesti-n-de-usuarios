@@ -3,7 +3,6 @@ session_start();
 
 // Comprobamos el usuario
 require_once("./user-control.php");
-adminControl();
 
 require_once ("../database/database.php");
 $page = $_SERVER['PHP_SELF'];
@@ -21,6 +20,7 @@ if(isset($_GET['id_usuario'])){
             header("Refresh:0; url=$page");
         }
     }else{
+        adminControl();
         try {
             borrarUsuario($id_usuario);
             echo "<script type='text/javascript'>alert('Usuario borrado correctamente');</script>";

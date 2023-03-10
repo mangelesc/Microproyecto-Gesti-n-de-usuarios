@@ -3,7 +3,7 @@ session_start();
 require_once("../database/database.php");
 
 if(empty($_POST['email']) || empty($_POST['password'])){
-    echo "Debes introducir tu nombre de usuario y tu contraseña";
+    echo "<script type='text/javascript'>alert('Debes introducir tu nombre de usuario y tu contraseña');</script>";
     header("Location: ../index.php");
 }
 else{
@@ -11,11 +11,7 @@ else{
     $password = $_POST['password'];
     
     $resultado = login($email, $password);
-    if($resultado == 0){
-        $_SESSION['error_login'] = "Datos incorrectos";
-        header("Location: ../index.php");
-    }
-    else{
+    if($resultado == 1){
         $_SESSION['id_usuario'] = $resultado['id_usuario'];
         $_SESSION['user'] = $resultado['nombre'];
         $_SESSION['email'] = $resultado['email'];
@@ -26,6 +22,9 @@ else{
         else{
             header("Location: user.php");
         }
+    }else{
+        echo "<script type='text/javascript'>alert('Ha habido un error al inciar sesión. Por favor, inténtalo de nuevo');</script>";
+        header("Refresh:0; ../index.php");
     }
 }
 
