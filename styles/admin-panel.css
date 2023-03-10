@@ -1,0 +1,151 @@
+/* Barra navegación */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle-h1 {
+    padding-bottom: 30px;
+}
+
+.user-main {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+a#add-user {
+    background-color: #e69283;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center !important;
+    justify-content: space-between;
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+#adduser-img {
+    width: 35px;
+}
+
+/* Tabla de usuarios*/
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid;
+    margin: 50px 0px;
+}
+
+.admin-table th {
+    padding: 10px;
+}
+
+.admin-table tr {
+    border: 1px solid;
+    padding: 20px;
+}
+
+.admin-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.user-tools {
+    width: 25px;
+}
+
+/* Formularios */
+.admin-form-div {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.admin-form h3 {
+    padding: 5px 0px 10px 5px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+}
+.formSection {
+    width: 300px;
+    padding: 0px 30px;
+}
+
+.admin-button {
+    width: 150px;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+
+.formSection label {
+    padding: 5px 10px;
+}
+
+.formSection input {
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: white;
+}
+
+.btn-goback {
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+.btn-goback a {
+    padding: 10px 20px;
+}
+
+.formSection-btn {
+    text-align: center;
+    color: white;
+}
+
+.admin-button {
+    background-color: #e69283;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.admin-button:hover,
+.btn-goback:hover {
+    transform: scale(1.1);
+}

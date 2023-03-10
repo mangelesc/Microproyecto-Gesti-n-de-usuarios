@@ -9,51 +9,27 @@
   <title>My Profife</title>
 </head>
 <body>
-    <?php 
-    if ($_SESSION['tipo_usuario'] == 0) {
-        echo '
-        <nav id="navBar">
-            <div id="navBar-left">
-                <img src="../imgs/logo.png" alt="logo" id="navbar-logo" />
-            </div>
-            <div id="navBar-right">
-                <ul id="navBarList">
-                    <li class="menu">
-                        <a id="home" href="">Home</a>
-                    </li>
-                    <li class="menu"><a id="AdminPanel" href="./admin.php">Admin Panel</a></li>
-                    <li class="menu"><a id="myProfile" href="./my-profile.php">My Profile</a></li>
-                    <li class="menu">
-                        <a id="log-out" href="./cerrar_sesion.php">Log Out</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        ';
-    } elseif ($_SESSION['tipo_usuario'] == 1){
-        echo '
-        <nav id="navBar">
-            <div id="navBar-left">
-                <img src="../imgs/logo.png" alt="logo" id="navbar-logo" />
-            </div>
-            <div id="navBar-right">
-                <ul id="navBarList">
-                    <li class="menu">
-                        <a id="home" href="">Home</a>
-                    </li>
-                    <li class="menu"><a id="myProfile" href="./my-profile.php">My Profile</a></li>
-                    <li class="menu">
-                        <a id="log-out" href="./cerrar_sesion.php">Log Out</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        ';
-    } else {
-        echo '';
-    }
-
-    ?>
+    <nav id="navBar">
+          <div id="navBar-left">
+              <img src="../imgs/logo.png" alt="logo" id="navbar-logo" />
+          </div>
+          <div id="navBar-right">
+              <ul id="navBarList">
+                  <li class="menu">
+                      <a id="home" href="./home.php">Inicio</a>
+                  </li>
+                  <?php 
+                  if ($_SESSION['tipo_usuario'] == 0) {
+                      echo '<li class="menu"><a id="AdminPanel" href="./admin.php">Admin Panel</a></li>';
+                  }
+                  ?>
+                  <li class="menu"><a id="myProfile" href="./my-profile.php">Mi Perfil</a></li>
+                  <li class="menu">
+                      <a id="log-out" href="./cerrar_sesion.php">Cerrar Sesión</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
     <main>
         <div class="UserProfile-box">
             <div class="UserProfile-left">
@@ -114,7 +90,7 @@
                             <p class="userProf-div-tittle">
                                 <b>Borrar mi cuenta</b>
                             </p>
-                            <p>Ya no necesitas un usuario?</p>
+                            <p>¿Ya no necesitas un usuario?</p>
                         </div>
                         <div class="userProf-div-btn">
                             <button class="btn btn-delete">Borrar</button>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/log-in.css" />
         <link rel="stylesheet" href="../styles/navbar.css" />
-        <link rel="stylesheet" href="../styles/users-table.css" />
+        <link rel="stylesheet" href="../styles/admin-panel.css" />
         <title>Admin Panel</title>
     </head>
     <body>
@@ -17,12 +17,12 @@
             <div id="navBar-right">
                 <ul id="navBarList">
                     <li class="menu">
-                        <a id="home" href="">Home</a>
+                        <a id="home" href="./home.php">Inicio</a>
                     </li>
                     <li class="menu"><a id="AdminPanel" href="./admin.php">Admin Panel</a></li>
-                    <li class="menu"><a id="myProfile" href="./my-profile.php">My Profile</a></li>
+                    <li class="menu"><a id="myProfile" href="./my-profile.php">Mi Perfil</a></li>
                     <li class="menu">
-                        <a id="log-out" href="./cerrar_sesion.php">Log Out</a>
+                        <a id="log-out" href="./cerrar_sesion.php">Salir</a>
                     </li>
                 </ul>
             </div>
@@ -30,11 +30,7 @@
         <main>
             <div class="user-main">
                 <h1>Administrar usuarios</h1>
-                <!-- <form>
-                    <input type="searchbox">
-                    <input type="submit">
-                </form> -->
-                <a id="add-user" href="./crear_usuario.php" id="adduser">
+                <a id="add-user" class="boton" href="./crear_usuario.php" id="adduser">
                     <img src="../imgs/add-user.png" alt="Add user" id="adduser-img">
                     Crear usuario
                 </a>
