@@ -6,25 +6,25 @@
 
 	$con = mysqli_connect($server, $user, $pass, $db) or die ("Error al conectar con la base de datos");
 
-    function login($email, $password){
-		$result = mysqli_query($GLOBALS["con"], "select * from usuario where email='$email'");
-		if (mysqli_num_rows($result)==1) {
-            $usuario = mysqli_fetch_array($result);
-            if ($password == $usuario['pass']) {
-                return $usuario;
-            }else{
-                return 0;
-            }
-        }else{
-            return 0;
-        }
+  function login($email, $password){
+			$result = mysqli_query($GLOBALS["con"], "select * from usuario where email='$email'");
+			if (mysqli_num_rows($result)==1) {
+					$usuario = mysqli_fetch_array($result);
+					if ($password == $usuario['pass']) {
+							return $usuario;
+					}else{
+							return 0;
+					}
+			}else{
+					return 0;
+			}
 	}
 
 	function verUsuarios(){
 		$result = mysqli_query($GLOBALS["con"], "select * from usuario");
 		$usuarios = array();
 		while($fila = mysqli_fetch_array($result)){
-			$usuarios[] = $fila;
+				$usuarios[] = $fila;
 		}
 		return $usuarios;//Devuelvo un array con los datos de todos los usuarios
 	}
@@ -47,8 +47,8 @@
 		mysqli_query($GLOBALS["con"], "delete from usuario where id_usuario=$id_usuario");
 	}
 
-    function cerrarConexion(){
+  function cerrarConexion(){
 		mysqli_close($GLOBALS["con"]);
 	}
 
-    ?>
+?>
