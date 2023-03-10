@@ -17,7 +17,8 @@ else{
     }
     else{
         $_SESSION['id_usuario'] = $resultado['id_usuario'];
-        $_SESSION['user'] = $resultado['email'];
+        $_SESSION['user'] = $resultado['nombre'];
+        $_SESSION['email'] = $resultado['email'];
         $_SESSION['tipo_usuario'] = $resultado['tipo_usuario'];
         if($_SESSION['tipo_usuario'] == 0){
             header("Location: admin.php");

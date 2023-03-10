@@ -1,0 +1,97 @@
+body {
+    background-color: #f2f2f2;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.UserProfile-box {
+    display: flex;
+    flex-direction: row;
+    align-content: center !important;
+    background: white;
+    padding: 0px;
+    border-radius: 20px;
+    margin: 25px 15% 25px 15%;
+}
+.UserProfile-left {
+    width: 40%;
+}
+
+.UserProfile-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#gretting {
+    padding: 15px 0px 0px 25px;
+    font-size: 24pt;
+}
+
+#UserProfile-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 0px 0px 15px;
+    object-fit: cover;
+}
+
+#UserProfile-img img {
+    object-fit: cover;
+}
+
+.userProf-tbody {
+    padding: 20px 35px 15px 45px;
+}
+.userProf-div {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+}
+.userProf-div-img-div {
+    padding: 5px 20px 5px 0px;
+}
+.userProf-div-img {
+    width: 50px !important;
+    margin: 5px 0px 15px 0px;
+}
+.userProf-div-info {
+    width: 500px;
+    margin: 15px;
+}
+.userProf-div-tittle {
+    margin-bottom: 0px;
+}
+.userProf-div-tittle b {
+    font-size: 10pt;
+}
+.userProf-div-btn {
+    text-align: center;
+    color: white;
+}
+
+.userProf-div-btn button {
+    background-color: #4a3aff;
+    width: 90px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+.userProf-div-btn button a {
+    text-decoration: none;
+    color: white;
+}
+
+.userProf-div-btn button:hover {
+    transform: scale(1.1);
+}
+
+.btn-delete {
+    background-color: rgb(175, 5, 5) !important;
+}
