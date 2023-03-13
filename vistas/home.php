@@ -61,7 +61,7 @@
                         <a id="home" href="../index.php">Inicio</a>
                     </li>
                     <li class="menu"><a id="log-in" href="../index.php">Iniciar Sesión</a></li>
-                    <li class="menu"><a id="sign-up"href="./php/sign-up.php">Crear Cuenta</a></li>
+                    <li class="menu"><a id="sign-up"href="../php/sign-up.php">Crear Cuenta</a></li>
                 </ul>
             </div>
             

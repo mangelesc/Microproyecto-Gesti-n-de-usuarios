@@ -34,12 +34,13 @@
                         <p>Crea una nueva cuenta</p>
                     </div>
                     <div id="form" class=rightSection-div">
-                        <form action="" method="post">
+                        <form action="../php/sign-up2.php" method="post">
                             <div class="formSection">
                                 <label for="">Username</label>
                                 <input
                                     type="text"
                                     placeholder="myUsername"
+                                    name="user-new"
                                     required
                                 />
                             </div>
@@ -47,17 +48,31 @@
                                 <label for="">Email address</label>
                                 <input
                                     type="text"
-                                    placeholder="email@myemail.com"
+                                    placeholder="myemail@grupo05.com"
                                     pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                    name="email-new"
                                     required
                                 />
                             </div>
                             <div class="formSection">
                                 <label for="">Password</label>
-                                <input type="password" placeholder="Password" required />
+                                <input type="password" placeholder="MyPassW0rd" 
+                                name="password-new" required />
                             </div>
                             <div class="formSection">
-                                <input id="signup-submit" type="submit" value="Registrarme">
+                                <div>
+                                    <input type="radio" id="user" name="tipo_usuario-new" value="1" required/>
+                                    <label for="admin">
+                                        He leído y acepto 
+                                            <a href="#" 
+                                            onClick="alert('A través de este sitio web no se recaban datos de carácter personal de las personas usuarias sin su conocimiento, ni se ceden a terceros. Los datos personales proporcionados se conservarán durante el tiempo necesario para cumplir con la finalidad para la que se recaban y para determinar las posibles responsabilidades que se pudieran derivar de la finalidad, además de los períodos establecidos en la normativa de archivos y documentación. ')">
+                                            la Política de Privacidad
+                                            </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="formSection">
+                                <input id="signup-submit" type="submit" name="new-user" value="Registrarme">
                             </div>
                         </form>
                         <div id="change" class="formSection">

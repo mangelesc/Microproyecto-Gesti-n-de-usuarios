@@ -11,7 +11,10 @@ else{
     $password = $_POST['password'];
     
     $resultado = login($email, $password);
-    if($resultado == 1){
+    if($resultado == 0){
+        echo "<script type='text/javascript'>alert('Ha habido un error al inciar sesión. Por favor, inténtalo de nuevo');</script>";
+        header("Refresh:0; ../index.php");
+    }else{
         $_SESSION['id_usuario'] = $resultado['id_usuario'];
         $_SESSION['user'] = $resultado['nombre'];
         $_SESSION['email'] = $resultado['email'];
@@ -22,9 +25,7 @@ else{
         else{
             header("Location: user.php");
         }
-    }else{
-        echo "<script type='text/javascript'>alert('Ha habido un error al inciar sesión. Por favor, inténtalo de nuevo');</script>";
-        header("Refresh:0; ../index.php");
+        
     }
 }
 

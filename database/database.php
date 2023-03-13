@@ -38,6 +38,7 @@
   function crearUsuario($nombre,$email , $pass, $tipo_usuario){
 		mysqli_query($GLOBALS["con"], "insert into usuario(nombre, email, pass, tipo_usuario) values('$nombre', '$email', '$pass', $tipo_usuario)");
 	}
+	
 
 	function modificarUsuario($id_usuario, $nombre, $email, $pass, $tipo_usuario){
 		mysqli_query($GLOBALS["con"], "update usuario set nombre='$nombre', email='$email', pass='$pass', tipo_usuario=$tipo_usuario where id_usuario=$id_usuario");

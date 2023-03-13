@@ -5,7 +5,7 @@ session_start();
 require_once("./user-control.php");
 
 require_once ("../database/database.php");
-$page = $_SERVER['PHP_SELF'];
+$page = $_SERVER['HTTP_REFERER'];
 
 if(isset($_GET['id_usuario'])){
     $id_usuario=$_GET['id_usuario'];
@@ -29,7 +29,6 @@ if(isset($_GET['id_usuario'])){
         }
         header("Refresh:0; url=$page");
     }
-    
-  }
+}
 
 ?>
