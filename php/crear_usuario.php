@@ -17,7 +17,7 @@ if(isset($_POST['add-user'])){
     else{
         try{
             crearUsuario($_POST['user-add'], $_POST['email-add'], $_POST['password-add'], $_POST['tipo_usuario-add']);
-            echo "<script type='text/javascript'>alert('Usuarioa añadido correctamente');</script>";
+            echo "<script type='text/javascript'>alert('Usuario añadido correctamente');</script>";
         } catch (Exception $e){
         echo "<script type='text/javascript'>alert('Ha habido un error, no se ha podido añadir el nuevo usuario. Inténtalo de nuevo');</script>";
         }
